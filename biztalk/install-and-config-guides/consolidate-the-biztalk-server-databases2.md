@@ -24,7 +24,7 @@ A Microsoft [!INCLUDE[btsBizTalkServerNoVersion](../includes/btsbiztalkservernov
 
 1. Click **Start**, point to **Programs**, point to [!INCLUDE[btsBizTalkServerNoVersion](../includes/btsbiztalkservernoversion-md.md)], and then click **BizTalk Server Configuration**. If prompted to select a configuration type, click **Custom configuration**.  
 
-2. Enter the same [!INCLUDE[btsSQLServerNoVersion](../includes/btssqlservernoversion-md.md)]**Server Name** and **Database Name** (for example *BizTalkConsolidatedDb*) for one of more of the following data stores:  
+2. Enter the same [!INCLUDE[btsSQLServerNoVersion](../includes/btssqlservernoversion-md.md)]**Server Name** and **Database Name** (for example *BizTalkConsolidatedDb*) for one or more of the following data stores:  
 
    |Feature Name|Data Store Name|  
    |------------------|---------------------|  
