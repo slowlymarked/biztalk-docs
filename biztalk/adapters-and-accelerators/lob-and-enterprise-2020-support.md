@@ -75,7 +75,7 @@ Oracle Database 19c Client (19.3)
 
 - Siebel 17
 
-### Sieble Client
+### Siebel Client
 
 - Siebel Web Client 17
 
