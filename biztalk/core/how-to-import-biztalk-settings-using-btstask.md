@@ -42,30 +42,30 @@ This topic lists the steps to import or export the BizTalk Server settings from 
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
- HYPERLINK "file:///C:\\Users\\v-dhgunt\\AppData\\Local\\Microsoft\\Windows\\Temporary%20Internet%20Files\\Content.Outlook\\05083AAB\\ImportMap_PosScenario.xml" - <SettingsMap>  
- HYPERLINK "file:///C:\\Users\\v-dhgunt\\AppData\\Local\\Microsoft\\Windows\\Temporary%20Internet%20Files\\Content.Outlook\\05083AAB\\ImportMap_PosScenario.xml" - <HostMappings>  
- HYPERLINK "file:///C:\\Users\\v-dhgunt\\AppData\\Local\\Microsoft\\Windows\\Temporary%20Internet%20Files\\Content.Outlook\\05083AAB\\ImportMap_PosScenario.xml" - <SourceHost Name="BizTalkServerApplication">  
-  <DestinationHosts>BizTalkServerApplication</DestinationHosts>   
-  </SourceHost>  
- HYPERLINK "file:///C:\\Users\\v-dhgunt\\AppData\\Local\\Microsoft\\Windows\\Temporary%20Internet%20Files\\Content.Outlook\\05083AAB\\ImportMap_PosScenario.xml" - <SourceHost Name="BizTalkServerIsolatedHost">  
-  <DestinationHosts>BizTalkServerIsolatedHost</DestinationHosts>   
-  </SourceHost>  
- HYPERLINK "file:///C:\\Users\\v-dhgunt\\AppData\\Local\\Microsoft\\Windows\\Temporary%20Internet%20Files\\Content.Outlook\\05083AAB\\ImportMap_PosScenario.xml" - <SourceHost Name="Host1">  
-  <DestinationHosts>Host2</DestinationHosts>   
-  </SourceHost>  
- HYPERLINK "file:///C:\\Users\\v-dhgunt\\AppData\\Local\\Microsoft\\Windows\\Temporary%20Internet%20Files\\Content.Outlook\\05083AAB\\ImportMap_PosScenario.xml" - <SourceHost Name="Host2">  
-  <DestinationHosts>Host1;Host3;Host4;Host5</DestinationHosts>   
-  </SourceHost>  
-  </HostMappings>  
- HYPERLINK "file:///C:\\Users\\v-dhgunt\\AppData\\Local\\Microsoft\\Windows\\Temporary%20Internet%20Files\\Content.Outlook\\05083AAB\\ImportMap_PosScenario.xml" - <HostInstanceMappings>  
- HYPERLINK "file:///C:\\Users\\v-dhgunt\\AppData\\Local\\Microsoft\\Windows\\Temporary%20Internet%20Files\\Content.Outlook\\05083AAB\\ImportMap_PosScenario.xml" - <SourceHostInstance Name="BizTalkServerApplication:COMPUTER_NAME1">  
-  <DestinationHostInstances>BizTalkServerApplication:COMPUTER_NAME2</DestinationHostInstances>   
-  </SourceHostInstance>  
- HYPERLINK "file:///C:\\Users\\v-dhgunt\\AppData\\Local\\Microsoft\\Windows\\Temporary%20Internet%20Files\\Content.Outlook\\05083AAB\\ImportMap_PosScenario.xml" - <SourceHostInstance Name="Host1:COMPUTER_NAME1">  
-  <DestinationHostInstances>Host2:COMPUTER_NAME2;Host3:COMPUTER_NAME3;Host4:COMPUTER_NAME4;Host5:COMPUTER_NAME5</DestinationHostInstances>   
-  </SourceHostInstance>  
-  </HostInstanceMappings>  
-  </SettingsMap>  
+<SettingsMap>
+   <HostMappings>
+      <SourceHost Name="BizTalkServerApplication">
+         <DestinationHosts>BizTalkServerApplication</DestinationHosts>
+      </SourceHost>
+      <SourceHost Name="BizTalkServerIsolatedHost">  
+         <DestinationHosts>BizTalkServerIsolatedHost</DestinationHosts>
+      </SourceHost>
+      <SourceHost Name="Host1">
+         <DestinationHosts>Host2</DestinationHosts>
+      </SourceHost>
+      <SourceHost Name="Host2">
+         <DestinationHosts>Host1;Host3;Host4;Host5</DestinationHosts>
+      </SourceHost>
+   </HostMappings>
+   <HostInstanceMappings>
+      <SourceHostInstance Name="BizTalkServerApplication:COMPUTER_NAME1">
+         <DestinationHostInstances>BizTalkServerApplication:COMPUTER_NAME2</DestinationHostInstances>
+      </SourceHostInstance>
+      <SourceHostInstance Name="Host1:COMPUTER_NAME1">
+         <DestinationHostInstances>Host2:COMPUTER_NAME2;Host3:COMPUTER_NAME3;Host4:COMPUTER_NAME4;Host5:COMPUTER_NAME5</DestinationHostInstances>
+      </SourceHostInstance>
+   </HostInstanceMappings>
+</SettingsMap>  
   
 ```  
   
@@ -74,11 +74,9 @@ This topic lists the steps to import or export the BizTalk Server settings from 
  To enter 1:n source to destination mappings, use a semicolon-separated list. For example:  
   
 ```  
-SourceHost Name="SourceHost1"   
-......DestinationHosts   
-............DestHost1;DestHost2;DestHost3   
-....../DestinationHosts   
-/SourceHost  
+<SourceHost Name="SourceHost1">
+   <DestinationHosts>DestHost1;DestHost2;DestHost3</DestinationHosts>
+</SourceHost>
 ```  
   
  Only those host-instances can be mapped for which the corresponding host mapping has also been created. If 'SourceHost1' has been mapped to 'DestinationHost1' in host mappings, the instances (if any) of 'DestinationHost1' can be mapped only to the instances (if any) of 'SourceHost1'. The UI Import Wizard takes care of this constraint. You would need to explicitly write it in the map file.  
